@@ -69,9 +69,11 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextFieldDelega
         audioFormat.sampleRate = 16000
         audioFormat.channels = 1
         
-        skSession!.startEarcon = SKAudioFile(url: URL(fileURLWithPath: startEarconPath!), pcmFormat: audioFormat)
-        skSession!.endEarcon = SKAudioFile(url: URL(fileURLWithPath: stopEarconPath!), pcmFormat: audioFormat)
-        skSession!.errorEarcon = SKAudioFile(url: URL(fileURLWithPath: errorEarconPath!), pcmFormat: audioFormat)
+        
+        
+        skSession?.startEarcon = SKAudioFile(url: URL(fileURLWithPath: startEarconPath!), pcmFormat: audioFormat)
+        skSession?.endEarcon = SKAudioFile(url: URL(fileURLWithPath: stopEarconPath!), pcmFormat: audioFormat)
+        skSession?.errorEarcon = SKAudioFile(url: URL(fileURLWithPath: errorEarconPath!), pcmFormat: audioFormat)
     }
     
     @IBAction func recordListener(_ sender: Any) {
@@ -136,6 +138,7 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextFieldDelega
     
     func transaction(_ transaction: SKTransaction!, didReceive recognition: SKRecognition!) {
         print(String(format: "didReceiveRecognition: %@", arguments: [recognition.text]))
+        inputTextbox.text = recognition.text
     }
     
     func transaction(_ transaction: SKTransaction!, didReceiveServiceResponse response: [AnyHashable : Any]!) {
@@ -154,6 +157,7 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextFieldDelega
         
         // Something went wrong. Ensure that your credentials are correct.
         // The user could also be offline, so be sure to handle this case appropriately.
+        inputTextbox.text = "Something went wrong with your audio. Make sure you have internet connection (data) and good reception. Try to speak louder and clear. Please try again."
         
         state = .idle
         resetTransaction()

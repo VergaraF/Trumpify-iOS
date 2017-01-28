@@ -37,15 +37,15 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trumpify_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="qR7-4v-EML">
                                 <rect key="frame" x="20" y="28" width="374" height="128"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e7L-4r-olR">
-                                <rect key="frame" x="54" y="422" width="306" height="256"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e7L-4r-olR">
+                                <rect key="frame" x="54" y="503" width="306" height="175"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Press the microphone to record your voice. Your input will be displayed here to confirm our app got it correctly. Then, if everything seems correct, tap Send to perform our magic and have Trump answer to your sentence!. You can also type your sentence here directly without having to record your voice.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eld-SL-j50">
-                                <rect key="frame" x="126.66666666666669" y="200" width="160" height="160"/>
+                                <rect key="frame" x="127" y="288" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="QNP-Te-f0g"/>
                                     <constraint firstAttribute="width" constant="160" id="hx7-pD-t4F"/>
@@ -56,9 +56,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.40380680561065674" green="0.07955729216337204" blue="0.29766273498535156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.67443042993545532" green="0.090237654745578766" blue="0.19195654988288879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eld-SL-j50" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="200" id="4fK-VQ-gZt"/>
+                            <constraint firstItem="eld-SL-j50" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="288" id="4fK-VQ-gZt"/>
                             <constraint firstItem="eld-SL-j50" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6il-uM-mm2"/>
                             <constraint firstItem="eld-SL-j50" firstAttribute="centerX" secondItem="qR7-4v-EML" secondAttribute="centerX" id="7Fj-jy-19d"/>
                             <constraint firstItem="kH7-xR-PUH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="8dm-jY-l1P"/>
@@ -68,8 +68,8 @@
                             <constraint firstItem="kH7-xR-PUH" firstAttribute="leading" secondItem="e7L-4r-olR" secondAttribute="leading" id="McJ-Lp-wck"/>
                             <constraint firstItem="qR7-4v-EML" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="QnO-wg-W0F"/>
                             <constraint firstItem="kSE-gJ-Nty" firstAttribute="top" secondItem="e7L-4r-olR" secondAttribute="bottom" constant="8" symbolic="YES" id="RDG-1p-Dke"/>
-                            <constraint firstItem="eld-SL-j50" firstAttribute="top" secondItem="qR7-4v-EML" secondAttribute="bottom" constant="44" id="hK2-qB-rgo"/>
-                            <constraint firstItem="e7L-4r-olR" firstAttribute="top" secondItem="eld-SL-j50" secondAttribute="bottom" constant="62" id="kMs-Sz-mJ9"/>
+                            <constraint firstItem="eld-SL-j50" firstAttribute="top" secondItem="qR7-4v-EML" secondAttribute="bottom" constant="132" id="hK2-qB-rgo"/>
+                            <constraint firstItem="e7L-4r-olR" firstAttribute="top" secondItem="eld-SL-j50" secondAttribute="bottom" constant="55" id="kMs-Sz-mJ9"/>
                             <constraint firstItem="kH7-xR-PUH" firstAttribute="trailing" secondItem="e7L-4r-olR" secondAttribute="trailing" id="m1K-ch-o2f"/>
                             <constraint firstItem="qR7-4v-EML" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pDc-CZ-Pwa"/>
                             <constraint firstItem="qR7-4v-EML" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qmS-Jc-cjT"/>
@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="136.23188405797103" y="138.58695652173915"/>
         </scene>
     </scenes>
     <resources>
