@@ -11,7 +11,7 @@ import SpeechKit
 //import Alamofire
 
 
-class ViewController: UIViewController, SKTransactionDelegate, UITextFieldDelegate {
+class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegate {
     
     enum SKSState {
         case idle
@@ -23,6 +23,7 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextFieldDelega
     @IBOutlet var inputTextbox: UITextView!
     @IBOutlet var sendButton  : UIButton!
     
+    var appJustRun: Bool!
     
     var language: String!
     var recognitionType: String!
@@ -38,6 +39,7 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextFieldDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        inputTextbox.delegate = self
         recognitionType = SKTransactionSpeechTypeDictation
         endpointer = .short
         language = LANGUAGE
@@ -45,6 +47,8 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextFieldDelega
         
         state = .idle
         skTransaction = nil
+        
+        appJustRun = true
         
         // Create a session
         skSession = SKSession(url: URL(string: SKSServerUrl), appToken: SKSAppKey)
@@ -139,6 +143,8 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextFieldDelega
     func transaction(_ transaction: SKTransaction!, didReceive recognition: SKRecognition!) {
         print(String(format: "didReceiveRecognition: %@", arguments: [recognition.text]))
         inputTextbox.text = recognition.text
+        
+        //send request with TEXT to my flask api
     }
     
     func transaction(_ transaction: SKTransaction!, didReceiveServiceResponse response: [AnyHashable : Any]!) {
@@ -177,14 +183,26 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextFieldDelega
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        inputTextbox.resignFirstResponder()
-    }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        inputTextbox.resignFirstResponder()
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n"  // Recognizes enter key in keyboard
+        {
+            textView.resignFirstResponder()
+            return false
+        }
         return true
     }
 
+   /* func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+       
+        inputTextbox.resignFirstResponder()
+        
+        return true
+    } */
+    
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
 }
 

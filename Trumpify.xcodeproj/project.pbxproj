@@ -23,6 +23,8 @@
 		1B24B19F1E3D3F7E006C6EEF /* sk_start.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 1B24B19E1E3D3F7E006C6EEF /* sk_start.pcm */; };
 		1B24B1A11E3D3F84006C6EEF /* sk_stop.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 1B24B1A01E3D3F84006C6EEF /* sk_stop.pcm */; };
 		1B24B1A41E3D3FE1006C6EEF /* sk_error.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 1B24B1A31E3D3FE1006C6EEF /* sk_error.pcm */; };
+		1B24B1A61E3D4A1E006C6EEF /* trump_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B24B1A51E3D4A1E006C6EEF /* trump_pic.png */; };
+		1B24B1A81E3D4D6A006C6EEF /* AIInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B24B1A71E3D4D6A006C6EEF /* AIInteractionViewController.swift */; };
 		C9953FF44500BBF6B51A5E8E /* Pods_Trumpify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7FB896818FB475810003762 /* Pods_Trumpify.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		1B24B19E1E3D3F7E006C6EEF /* sk_start.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = sk_start.pcm; sourceTree = "<group>"; };
 		1B24B1A01E3D3F84006C6EEF /* sk_stop.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = sk_stop.pcm; sourceTree = "<group>"; };
 		1B24B1A31E3D3FE1006C6EEF /* sk_error.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = sk_error.pcm; sourceTree = "<group>"; };
+		1B24B1A51E3D4A1E006C6EEF /* trump_pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trump_pic.png; sourceTree = "<group>"; };
+		1B24B1A71E3D4D6A006C6EEF /* AIInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIInteractionViewController.swift; sourceTree = "<group>"; };
 		71D55901D117A9735C30C3E5 /* Pods-Trumpify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trumpify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trumpify/Pods-Trumpify.debug.xcconfig"; sourceTree = "<group>"; };
 		E7FB896818FB475810003762 /* Pods_Trumpify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trumpify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +92,7 @@
 				1B1C22BB1E3D08A1002AE0EB /* AppDelegate.swift */,
 				1B24B1931E3D2049006C6EEF /* AppConfig.swift */,
 				1B1C22BD1E3D08A1002AE0EB /* ViewController.swift */,
+				1B24B1A71E3D4D6A006C6EEF /* AIInteractionViewController.swift */,
 				1B1C22BF1E3D08A1002AE0EB /* Main.storyboard */,
 				1B1C22C21E3D08A1002AE0EB /* Assets.xcassets */,
 				1B1C22C41E3D08A1002AE0EB /* LaunchScreen.storyboard */,
@@ -99,6 +104,7 @@
 		1B1C22CD1E3D0DF9002AE0EB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				1B24B1A51E3D4A1E006C6EEF /* trump_pic.png */,
 				1B24B1991E3D2898006C6EEF /* send.png */,
 				1B24B19B1E3D2C6A006C6EEF /* trumpify_logo.png */,
 				1B24B1951E3D252B006C6EEF /* mic-off.png */,
@@ -209,6 +215,7 @@
 				1B1C22D51E3D16EF002AE0EB /* trump_icon_180*180.png in Resources */,
 				1B24B1A41E3D3FE1006C6EEF /* sk_error.pcm in Resources */,
 				1B24B19C1E3D2C6A006C6EEF /* trumpify_logo.png in Resources */,
+				1B24B1A61E3D4A1E006C6EEF /* trump_pic.png in Resources */,
 				1B24B1A11E3D3F84006C6EEF /* sk_stop.pcm in Resources */,
 				1B24B1961E3D252B006C6EEF /* mic-off.png in Resources */,
 				1B1C22C11E3D08A1002AE0EB /* Main.storyboard in Resources */,
@@ -274,6 +281,7 @@
 				1B24B1941E3D2049006C6EEF /* AppConfig.swift in Sources */,
 				1B1C22BE1E3D08A1002AE0EB /* ViewController.swift in Sources */,
 				1B1C22BC1E3D08A1002AE0EB /* AppDelegate.swift in Sources */,
+				1B24B1A81E3D4D6A006C6EEF /* AIInteractionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
