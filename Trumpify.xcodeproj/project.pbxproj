@@ -15,6 +15,11 @@
 		1B1C22CF1E3D0E2B002AE0EB /* trump-splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C22CE1E3D0E2B002AE0EB /* trump-splash.png */; };
 		1B1C22D51E3D16EF002AE0EB /* trump_icon_180*180.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C22D41E3D16EF002AE0EB /* trump_icon_180*180.png */; };
 		1B1C22D71E3D171C002AE0EB /* trump_icon_120*120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C22D61E3D171C002AE0EB /* trump_icon_120*120.png */; };
+		1B24B1941E3D2049006C6EEF /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B24B1931E3D2049006C6EEF /* AppConfig.swift */; };
+		1B24B1961E3D252B006C6EEF /* mic-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B24B1951E3D252B006C6EEF /* mic-off.png */; };
+		1B24B1981E3D2531006C6EEF /* mic-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B24B1971E3D2531006C6EEF /* mic-on.png */; };
+		1B24B19A1E3D2898006C6EEF /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B24B1991E3D2898006C6EEF /* send.png */; };
+		1B24B19C1E3D2C6A006C6EEF /* trumpify_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B24B19B1E3D2C6A006C6EEF /* trumpify_logo.png */; };
 		C9953FF44500BBF6B51A5E8E /* Pods_Trumpify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7FB896818FB475810003762 /* Pods_Trumpify.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +35,11 @@
 		1B1C22CE1E3D0E2B002AE0EB /* trump-splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trump-splash.png"; sourceTree = "<group>"; };
 		1B1C22D41E3D16EF002AE0EB /* trump_icon_180*180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trump_icon_180*180.png"; sourceTree = "<group>"; };
 		1B1C22D61E3D171C002AE0EB /* trump_icon_120*120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trump_icon_120*120.png"; sourceTree = "<group>"; };
+		1B24B1931E3D2049006C6EEF /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		1B24B1951E3D252B006C6EEF /* mic-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic-off.png"; sourceTree = "<group>"; };
+		1B24B1971E3D2531006C6EEF /* mic-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic-on.png"; sourceTree = "<group>"; };
+		1B24B1991E3D2898006C6EEF /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send.png; sourceTree = "<group>"; };
+		1B24B19B1E3D2C6A006C6EEF /* trumpify_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trumpify_logo.png; sourceTree = "<group>"; };
 		71D55901D117A9735C30C3E5 /* Pods-Trumpify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trumpify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trumpify/Pods-Trumpify.debug.xcconfig"; sourceTree = "<group>"; };
 		E7FB896818FB475810003762 /* Pods_Trumpify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trumpify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,6 +79,7 @@
 			children = (
 				1B1C22CD1E3D0DF9002AE0EB /* Assets */,
 				1B1C22BB1E3D08A1002AE0EB /* AppDelegate.swift */,
+				1B24B1931E3D2049006C6EEF /* AppConfig.swift */,
 				1B1C22BD1E3D08A1002AE0EB /* ViewController.swift */,
 				1B1C22BF1E3D08A1002AE0EB /* Main.storyboard */,
 				1B1C22C21E3D08A1002AE0EB /* Assets.xcassets */,
@@ -81,6 +92,10 @@
 		1B1C22CD1E3D0DF9002AE0EB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				1B24B1991E3D2898006C6EEF /* send.png */,
+				1B24B19B1E3D2C6A006C6EEF /* trumpify_logo.png */,
+				1B24B1951E3D252B006C6EEF /* mic-off.png */,
+				1B24B1971E3D2531006C6EEF /* mic-on.png */,
 				1B1C22D41E3D16EF002AE0EB /* trump_icon_180*180.png */,
 				1B1C22D61E3D171C002AE0EB /* trump_icon_120*120.png */,
 				1B1C22CE1E3D0E2B002AE0EB /* trump-splash.png */,
@@ -168,10 +183,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B24B1981E3D2531006C6EEF /* mic-on.png in Resources */,
 				1B1C22D71E3D171C002AE0EB /* trump_icon_120*120.png in Resources */,
+				1B24B19A1E3D2898006C6EEF /* send.png in Resources */,
 				1B1C22C61E3D08A1002AE0EB /* LaunchScreen.storyboard in Resources */,
 				1B1C22C31E3D08A1002AE0EB /* Assets.xcassets in Resources */,
 				1B1C22D51E3D16EF002AE0EB /* trump_icon_180*180.png in Resources */,
+				1B24B19C1E3D2C6A006C6EEF /* trumpify_logo.png in Resources */,
+				1B24B1961E3D252B006C6EEF /* mic-off.png in Resources */,
 				1B1C22C11E3D08A1002AE0EB /* Main.storyboard in Resources */,
 				1B1C22CF1E3D0E2B002AE0EB /* trump-splash.png in Resources */,
 			);
@@ -232,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B24B1941E3D2049006C6EEF /* AppConfig.swift in Sources */,
 				1B1C22BE1E3D08A1002AE0EB /* ViewController.swift in Sources */,
 				1B1C22BC1E3D08A1002AE0EB /* AppDelegate.swift in Sources */,
 			);
@@ -397,6 +417,7 @@
 				1B1C22CC1E3D08A2002AE0EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

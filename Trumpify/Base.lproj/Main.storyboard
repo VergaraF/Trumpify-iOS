@@ -1,26 +1,93 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Trumpify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSE-gJ-Nty">
+                                <rect key="frame" x="169" y="686" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZpP-37-ITd"/>
+                                    <constraint firstAttribute="width" constant="76" id="srT-fo-CgS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Send"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kH7-xR-PUH">
+                                <rect key="frame" x="54" y="469" width="306" height="200"/>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trumpify_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="qR7-4v-EML">
+                                <rect key="frame" x="20" y="28" width="374" height="128"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e7L-4r-olR">
+                                <rect key="frame" x="54" y="422" width="306" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eld-SL-j50">
+                                <rect key="frame" x="126.66666666666669" y="200" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="QNP-Te-f0g"/>
+                                    <constraint firstAttribute="width" constant="160" id="hx7-pD-t4F"/>
+                                </constraints>
+                                <state key="normal" image="mic-off.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40380680561065674" green="0.07955729216337204" blue="0.29766273498535156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eld-SL-j50" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="200" id="4fK-VQ-gZt"/>
+                            <constraint firstItem="eld-SL-j50" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6il-uM-mm2"/>
+                            <constraint firstItem="eld-SL-j50" firstAttribute="centerX" secondItem="qR7-4v-EML" secondAttribute="centerX" id="7Fj-jy-19d"/>
+                            <constraint firstItem="kH7-xR-PUH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="8dm-jY-l1P"/>
+                            <constraint firstItem="kH7-xR-PUH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="469" id="GWf-3a-GcM"/>
+                            <constraint firstItem="eld-SL-j50" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gzg-pW-pbq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kSE-gJ-Nty" secondAttribute="bottom" constant="20" id="H33-bT-efk"/>
+                            <constraint firstItem="kH7-xR-PUH" firstAttribute="leading" secondItem="e7L-4r-olR" secondAttribute="leading" id="McJ-Lp-wck"/>
+                            <constraint firstItem="qR7-4v-EML" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="QnO-wg-W0F"/>
+                            <constraint firstItem="kSE-gJ-Nty" firstAttribute="top" secondItem="e7L-4r-olR" secondAttribute="bottom" constant="8" symbolic="YES" id="RDG-1p-Dke"/>
+                            <constraint firstItem="eld-SL-j50" firstAttribute="top" secondItem="qR7-4v-EML" secondAttribute="bottom" constant="44" id="hK2-qB-rgo"/>
+                            <constraint firstItem="e7L-4r-olR" firstAttribute="top" secondItem="eld-SL-j50" secondAttribute="bottom" constant="62" id="kMs-Sz-mJ9"/>
+                            <constraint firstItem="kH7-xR-PUH" firstAttribute="trailing" secondItem="e7L-4r-olR" secondAttribute="trailing" id="m1K-ch-o2f"/>
+                            <constraint firstItem="qR7-4v-EML" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pDc-CZ-Pwa"/>
+                            <constraint firstItem="qR7-4v-EML" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qmS-Jc-cjT"/>
+                            <constraint firstItem="kH7-xR-PUH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sDN-P3-Xnn"/>
+                            <constraint firstItem="kSE-gJ-Nty" firstAttribute="top" secondItem="kH7-xR-PUH" secondAttribute="bottom" constant="17" id="vEo-AI-HeG"/>
+                            <constraint firstItem="kSE-gJ-Nty" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yFh-Jg-Oz3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputTextbox" destination="e7L-4r-olR" id="LtQ-mT-rLo"/>
+                        <outlet property="recordButton" destination="eld-SL-j50" id="vbw-zW-Ghy"/>
+                        <outlet property="sendButton" destination="kSE-gJ-Nty" id="5o2-dY-Xvt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mic-off.png" width="234" height="234"/>
+        <image name="trumpify_logo.png" width="612" height="210"/>
+    </resources>
 </document>
