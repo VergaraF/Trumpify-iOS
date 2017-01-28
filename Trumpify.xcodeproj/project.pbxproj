@@ -15,9 +15,11 @@
 		1B1C22CF1E3D0E2B002AE0EB /* trump-splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C22CE1E3D0E2B002AE0EB /* trump-splash.png */; };
 		1B1C22D51E3D16EF002AE0EB /* trump_icon_180*180.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C22D41E3D16EF002AE0EB /* trump_icon_180*180.png */; };
 		1B1C22D71E3D171C002AE0EB /* trump_icon_120*120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C22D61E3D171C002AE0EB /* trump_icon_120*120.png */; };
+		C9953FF44500BBF6B51A5E8E /* Pods_Trumpify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7FB896818FB475810003762 /* Pods_Trumpify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AAC394CF9A6CC88FBB719F9 /* Pods-Trumpify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trumpify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trumpify/Pods-Trumpify.release.xcconfig"; sourceTree = "<group>"; };
 		1B1C22B81E3D08A1002AE0EB /* Trumpify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trumpify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B1C22BB1E3D08A1002AE0EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B1C22BD1E3D08A1002AE0EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		1B1C22CE1E3D0E2B002AE0EB /* trump-splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trump-splash.png"; sourceTree = "<group>"; };
 		1B1C22D41E3D16EF002AE0EB /* trump_icon_180*180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trump_icon_180*180.png"; sourceTree = "<group>"; };
 		1B1C22D61E3D171C002AE0EB /* trump_icon_120*120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trump_icon_120*120.png"; sourceTree = "<group>"; };
+		71D55901D117A9735C30C3E5 /* Pods-Trumpify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trumpify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trumpify/Pods-Trumpify.debug.xcconfig"; sourceTree = "<group>"; };
+		E7FB896818FB475810003762 /* Pods_Trumpify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trumpify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9953FF44500BBF6B51A5E8E /* Pods_Trumpify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				1B1C22BA1E3D08A1002AE0EB /* Trumpify */,
 				1B1C22B91E3D08A1002AE0EB /* Products */,
+				7FC7D4BC217726E5A9256E0E /* Pods */,
+				356FE345C13E2CF8C50DD9F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +88,23 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		356FE345C13E2CF8C50DD9F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7FB896818FB475810003762 /* Pods_Trumpify.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FC7D4BC217726E5A9256E0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71D55901D117A9735C30C3E5 /* Pods-Trumpify.debug.xcconfig */,
+				0AAC394CF9A6CC88FBB719F9 /* Pods-Trumpify.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B1C22CA1E3D08A2002AE0EB /* Build configuration list for PBXNativeTarget "Trumpify" */;
 			buildPhases = (
+				2861BB1BB37775225B1BDF14 /* [CP] Check Pods Manifest.lock */,
 				1B1C22B41E3D08A1002AE0EB /* Sources */,
 				1B1C22B51E3D08A1002AE0EB /* Frameworks */,
 				1B1C22B61E3D08A1002AE0EB /* Resources */,
+				35DEE06F7CF021EE2DA66765 /* [CP] Embed Pods Frameworks */,
+				58711BE50B2B3AB5DADB457F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,6 +178,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2861BB1BB37775225B1BDF14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35DEE06F7CF021EE2DA66765 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trumpify/Pods-Trumpify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58711BE50B2B3AB5DADB457F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trumpify/Pods-Trumpify-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B1C22B41E3D08A1002AE0EB /* Sources */ = {
@@ -277,6 +352,7 @@
 		};
 		1B1C22CB1E3D08A2002AE0EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71D55901D117A9735C30C3E5 /* Pods-Trumpify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DZ2LJDS532;
@@ -290,6 +366,7 @@
 		};
 		1B1C22CC1E3D08A2002AE0EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AAC394CF9A6CC88FBB719F9 /* Pods-Trumpify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DZ2LJDS532;

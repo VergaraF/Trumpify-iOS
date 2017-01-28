@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.2.0)
+  - SpeechKit (2.2.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - SpeechKit
+
+SPEC CHECKSUMS:
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  SpeechKit: f9b9498a7e8696ec284c1fb2722750736bddbc14
+
+PODFILE CHECKSUM: fa8348aaf935fc215f373c3ea4329e3e69ef3bcc
+
+COCOAPODS: 1.1.1

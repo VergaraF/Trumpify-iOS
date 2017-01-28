@@ -6,5 +6,7 @@ target 'Trumpify' do
   use_frameworks!
 
   # Pods for Trumpify
+    pod 'SpeechKit'
+    pod ‘Alamofire’
 
 end

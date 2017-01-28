@@ -1,0 +1,6 @@
+framework module Pods_Trumpify {
+  umbrella header "Pods-Trumpify-umbrella.h"
+
+  export *
+  module * { export * }
+}
