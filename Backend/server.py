@@ -104,9 +104,10 @@ def getDocumentThemes(textSubmitted):
         print(data)
         if "auto_categories" in data:
             for auto_categories in data["auto_categories"]:
-                for categories in auto_categories["categories"]:
-                    if categories["sentiment_score"] == data["sentiment_score"]:
-                        return (categories["title"])
+                if "categories" in auto_categories
+                    for categories in auto_categories["categories"]:
+                        if categories["sentiment_score"] == data["sentiment_score"]:
+                            return (categories["title"])
 
         return("Nothing was found")
 

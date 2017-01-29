@@ -23,7 +23,8 @@ class AIInteractionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelTrump.text = string
+        let newStr = string.replacingOccurrences(of: "u2019", with: "'")
+        labelTrump.text = newStr
     }
     
 }

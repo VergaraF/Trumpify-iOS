@@ -226,6 +226,7 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegat
     
     @IBAction func sendButtonPressed(_ sender: Any) {
         let stringToSend = inputTextbox!.text.replacingOccurrences(of: " ", with: "%20")
+        print("String to send " + stringToSend)
         if !appJustRun{
             Alamofire.request(serverURL + "trump/" + stringToSend).responseString { response in
                // print(response.request)
