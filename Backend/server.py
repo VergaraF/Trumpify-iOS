@@ -130,7 +130,7 @@ api.add_resource(inputAnalysisAndAIResponse, '/trump/<string:text>')
 
 if __name__=='__main__':
    # app.run(host='142.157.101.138')
-    app.run(host='127.0.0.1')
+    app.run(host='10.0.0.151')
 
 
 #getDocumentThemes("I had an awful day at work")
