@@ -115,13 +115,15 @@ class inputAnalysisAndAIResponse(Resource):
     def get(self, text):
         # perform text analysis
         # get value from trump AI
-        topic = getDocumentThemes(text)
+        topic = getDocumentThemes(text).replace("_", " ")
         if(topic == "Nothing was found"):
             return "Believe me folks, I didn't receive anything to respond to... but I can give you some alternative facts if you'd like."
+        print (topic)
 
-        #sentenceByAI = trumpAI.acceptRequest(topic)
+        sentenceByAI = trumpAI.acceptRequest(topic)
+        print(sentenceByAI)
 
-        return topic
+        return sentenceByAI
 
 api.add_resource(inputAnalysisAndAIResponse, '/trump/<string:text>')
 

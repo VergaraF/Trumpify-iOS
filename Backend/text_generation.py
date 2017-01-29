@@ -8,7 +8,7 @@ import numpy as np
 import random
 import sys
 
-trump_LSTM_weigth_file = 'weights/trump_LSTM_weights_2_4.h5'
+trump_LSTM_weigth_file = 'weights/trump_LSTM_weights_4_4.h5'
 
 def sample(preds, temperature):
     # helper function to sample an index from a probability array
@@ -60,7 +60,7 @@ def acceptRequest(topic):
     print('Generating with seed: "' + sentence + '"')
     sys.stdout.write(generated)
 
-    for i in range(190):
+    for i in range(290):
         x = np.zeros((1, len(sentence), len(chars)))
         for t, char in enumerate(sentence):
             x[0, t, char_indices[char]] = 1.

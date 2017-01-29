@@ -37,7 +37,7 @@
                                     <action selector="sendButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ryc-80-X15"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kH7-xR-PUH">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kH7-xR-PUH">
                                 <rect key="frame" x="54" y="469" width="306" height="200"/>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trumpify_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="qR7-4v-EML">
@@ -72,19 +72,19 @@
                             <constraint firstItem="eld-SL-j50" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gzg-pW-pbq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kSE-gJ-Nty" secondAttribute="bottom" constant="20" id="H33-bT-efk"/>
                             <constraint firstItem="kH7-xR-PUH" firstAttribute="leading" secondItem="e7L-4r-olR" secondAttribute="leading" constant="34" id="McJ-Lp-wck"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e7L-4r-olR" secondAttribute="bottom" constant="58" id="Q7X-xU-ahd"/>
                             <constraint firstItem="qR7-4v-EML" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="QnO-wg-W0F"/>
-                            <constraint firstItem="kSE-gJ-Nty" firstAttribute="top" secondItem="e7L-4r-olR" secondAttribute="bottom" constant="8" symbolic="YES" id="RDG-1p-Dke"/>
                             <constraint firstItem="eld-SL-j50" firstAttribute="top" secondItem="qR7-4v-EML" secondAttribute="bottom" constant="132" id="hK2-qB-rgo"/>
                             <constraint firstItem="e7L-4r-olR" firstAttribute="top" secondItem="eld-SL-j50" secondAttribute="bottom" constant="55" id="kMs-Sz-mJ9"/>
                             <constraint firstItem="kH7-xR-PUH" firstAttribute="trailing" secondItem="e7L-4r-olR" secondAttribute="trailing" constant="-34" id="m1K-ch-o2f"/>
                             <constraint firstItem="qR7-4v-EML" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pDc-CZ-Pwa"/>
                             <constraint firstItem="qR7-4v-EML" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qmS-Jc-cjT"/>
                             <constraint firstItem="kH7-xR-PUH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sDN-P3-Xnn"/>
-                            <constraint firstItem="kSE-gJ-Nty" firstAttribute="top" secondItem="kH7-xR-PUH" secondAttribute="bottom" constant="17" id="vEo-AI-HeG"/>
                             <constraint firstItem="kSE-gJ-Nty" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yFh-Jg-Oz3"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="Q7X-xU-ahd" id="KRQ-l2-UlN"/>
                         <outlet property="inputTextbox" destination="e7L-4r-olR" id="LtQ-mT-rLo"/>
                         <outlet property="recordButton" destination="eld-SL-j50" id="vbw-zW-Ghy"/>
                         <outlet property="sendButton" destination="kSE-gJ-Nty" id="5o2-dY-Xvt"/>

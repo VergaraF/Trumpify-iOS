@@ -23,6 +23,7 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegat
     @IBOutlet var inputTextbox: UITextView!
     @IBOutlet var sendButton  : UIButton!
     
+    @IBOutlet var bottomConstraint: NSLayoutConstraint!
     var appJustRun = true
     
     let serverURL = "http://fvergara.ddns.net:5000/"
@@ -65,7 +66,34 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegat
             return
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+
+        
         loadEarcons()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    func keyboardNotification(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+            let duration:TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+            let animationCurveRawNSN = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber
+            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIViewAnimationOptions.curveEaseInOut.rawValue
+            let animationCurve:UIViewAnimationOptions = UIViewAnimationOptions(rawValue: animationCurveRaw)
+            if (endFrame?.origin.y)! >= UIScreen.main.bounds.size.height {
+                self.bottomConstraint?.constant = 100
+            } else {
+                self.bottomConstraint?.constant = endFrame?.size.height ?? 0.0
+            }
+            UIView.animate(withDuration: duration,
+                           delay: TimeInterval(0),
+                           options: animationCurve,
+                           animations: { self.view.layoutIfNeeded() },
+                           completion: nil)
+        }
     }
 
     func loadEarcons() {
@@ -231,6 +259,7 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegat
             appJustRun = false
         }
     }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

@@ -11,6 +11,8 @@ import UIKit
 import Alamofire
 
 class AIInteractionViewController: UIViewController {
+    
+    
     @IBOutlet var labelTrump: UILabel!
     
     var string: String!
