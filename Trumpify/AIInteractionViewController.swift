@@ -11,9 +11,17 @@ import UIKit
 import Alamofire
 
 class AIInteractionViewController: UIViewController {
+    @IBOutlet var labelTrump: UILabel!
     
+    var string: String!
+    
+    @IBAction func goBackButtonPressed(_ sender: Any) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        labelTrump.text = string
     }
     
 }

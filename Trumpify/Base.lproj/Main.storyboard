@@ -28,8 +28,14 @@
                                     <constraint firstAttribute="height" constant="30" id="ZpP-37-ITd"/>
                                     <constraint firstAttribute="width" constant="76" id="srT-fo-CgS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Send"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="tintColor" red="0.96090763807296753" green="0.96042603254318237" blue="0.98650425672531128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" red="0.085281461480000001" green="0.1419805586" blue="0.27855634689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ryc-80-X15"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kH7-xR-PUH">
                                 <rect key="frame" x="54" y="469" width="306" height="200"/>
@@ -38,7 +44,7 @@
                                 <rect key="frame" x="20" y="28" width="374" height="128"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e7L-4r-olR">
-                                <rect key="frame" x="54" y="503" width="306" height="175"/>
+                                <rect key="frame" x="20" y="503" width="374" height="175"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Press the microphone to record your voice. Your input will be displayed here to confirm our app got it correctly. Then, if everything seems correct, tap Send to perform our magic and have Trump answer to your sentence!. You can also type your sentence here directly without having to record your voice.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -65,12 +71,12 @@
                             <constraint firstItem="kH7-xR-PUH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="469" id="GWf-3a-GcM"/>
                             <constraint firstItem="eld-SL-j50" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gzg-pW-pbq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kSE-gJ-Nty" secondAttribute="bottom" constant="20" id="H33-bT-efk"/>
-                            <constraint firstItem="kH7-xR-PUH" firstAttribute="leading" secondItem="e7L-4r-olR" secondAttribute="leading" id="McJ-Lp-wck"/>
+                            <constraint firstItem="kH7-xR-PUH" firstAttribute="leading" secondItem="e7L-4r-olR" secondAttribute="leading" constant="34" id="McJ-Lp-wck"/>
                             <constraint firstItem="qR7-4v-EML" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="QnO-wg-W0F"/>
                             <constraint firstItem="kSE-gJ-Nty" firstAttribute="top" secondItem="e7L-4r-olR" secondAttribute="bottom" constant="8" symbolic="YES" id="RDG-1p-Dke"/>
                             <constraint firstItem="eld-SL-j50" firstAttribute="top" secondItem="qR7-4v-EML" secondAttribute="bottom" constant="132" id="hK2-qB-rgo"/>
                             <constraint firstItem="e7L-4r-olR" firstAttribute="top" secondItem="eld-SL-j50" secondAttribute="bottom" constant="55" id="kMs-Sz-mJ9"/>
-                            <constraint firstItem="kH7-xR-PUH" firstAttribute="trailing" secondItem="e7L-4r-olR" secondAttribute="trailing" id="m1K-ch-o2f"/>
+                            <constraint firstItem="kH7-xR-PUH" firstAttribute="trailing" secondItem="e7L-4r-olR" secondAttribute="trailing" constant="-34" id="m1K-ch-o2f"/>
                             <constraint firstItem="qR7-4v-EML" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pDc-CZ-Pwa"/>
                             <constraint firstItem="qR7-4v-EML" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qmS-Jc-cjT"/>
                             <constraint firstItem="kH7-xR-PUH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sDN-P3-Xnn"/>
@@ -82,6 +88,7 @@
                         <outlet property="inputTextbox" destination="e7L-4r-olR" id="LtQ-mT-rLo"/>
                         <outlet property="recordButton" destination="eld-SL-j50" id="vbw-zW-Ghy"/>
                         <outlet property="sendButton" destination="kSE-gJ-Nty" id="5o2-dY-Xvt"/>
+                        <segue destination="3mM-Yz-lJr" kind="show" identifier="TrumpTalksSegue" id="jBK-90-Wm2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -107,16 +114,26 @@
                                     <constraint firstAttribute="height" constant="274" id="AgQ-oD-6ox"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAS-7R-rH0">
-                                <rect key="frame" x="0.0" y="294" width="414" height="323"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAS-7R-rH0">
+                                <rect key="frame" x="0.0" y="294" width="414" height="357"/>
                                 <color key="backgroundColor" red="0.085281461477279663" green="0.14198055863380432" blue="0.27855634689331055" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="357" id="xv9-3o-0TT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <color key="textColor" red="0.96090763807296753" green="0.96042603254318237" blue="0.98650425672531128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF7-Rx-rI4">
-                                <rect key="frame" x="141" y="668" width="133" height="30"/>
-                                <state key="normal" title="Say something else"/>
+                                <rect key="frame" x="111" y="659" width="192" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Say something else">
+                                    <color key="titleColor" red="0.61870783567428589" green="0.16006709635257721" blue="0.20789675414562225" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackButtonPressed:" destination="3mM-Yz-lJr" eventType="touchUpInside" id="8op-dg-nFJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="e9V-yk-iq4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91415631771087646" green="0.92470288276672363" blue="0.97256612777709961" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -133,10 +150,13 @@
                             <constraint firstAttribute="trailing" secondItem="gAS-7R-rH0" secondAttribute="trailing" id="tQZ-rh-raU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelTrump" destination="gAS-7R-rH0" id="KP5-Dw-Ykd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7eS-oE-W6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050.7246376811595" y="138.58695652173915"/>
+            <point key="canvasLocation" x="1330.4347826086957" y="138.58695652173915"/>
         </scene>
     </scenes>
     <resources>

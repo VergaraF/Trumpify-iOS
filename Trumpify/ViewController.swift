@@ -8,7 +8,7 @@
 
 import UIKit
 import SpeechKit
-//import Alamofire
+import Alamofire
 
 
 class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegate {
@@ -23,7 +23,11 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegat
     @IBOutlet var inputTextbox: UITextView!
     @IBOutlet var sendButton  : UIButton!
     
-    var appJustRun: Bool!
+    var appJustRun = true
+    
+    let serverURL = "http://fvergara.ddns.net:5000/"
+    
+    var AI = AIInteractionViewController()
     
     var language: String!
     var recognitionType: String!
@@ -35,7 +39,6 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegat
     
     var state = SKSState.idle
 
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +52,7 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegat
         skTransaction = nil
         
         appJustRun = true
+        inputTextbox.text = "Press the microphone to record your voice. Your input will be displayed here to confirm our app got it correctly. Then, if everything seems correct, tap Send to perform our magic and have Trump answer to your sentence!. You can also type your sentence here directly without having to record your voice."
         
         // Create a session
         skSession = SKSession(url: URL(string: SKSServerUrl), appToken: SKSAppKey)
@@ -143,8 +147,8 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegat
     func transaction(_ transaction: SKTransaction!, didReceive recognition: SKRecognition!) {
         print(String(format: "didReceiveRecognition: %@", arguments: [recognition.text]))
         inputTextbox.text = recognition.text
+        appJustRun = false
         
-        //send request with TEXT to my flask api
     }
     
     func transaction(_ transaction: SKTransaction!, didReceiveServiceResponse response: [AnyHashable : Any]!) {
@@ -191,15 +195,43 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegat
         }
         return true
     }
-
-   /* func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
-       
-        inputTextbox.resignFirstResponder()
-        
-        return true
-    } */
     
+    @IBAction func sendButtonPressed(_ sender: Any) {
+        let stringToSend = inputTextbox!.text.replacingOccurrences(of: " ", with: "%20")
+        if !appJustRun{
+            Alamofire.request(serverURL + "trump/" + stringToSend).responseString { response in
+               // print(response.request)
+                print("Success: \(response.result.isSuccess)")
+                print("Response String: \(response.result.value)")
+                
+                if !self.appJustRun && response.result.value != nil{
+                    self.inputTextbox.text = response.result.value!
+                    self.AI.string = response.result.value!
+                    self.performSegue(withIdentifier: "TrumpTalksSegue", sender: self)
+                }
 
+            }
+        }else{
+            inputTextbox.text = inputTextbox.text + ".\n\n Enter something valid."
+        }
+        
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TrumpTalksSegue"{
+            let vc = segue.destination as! AIInteractionViewController
+            print(inputTextbox.text)
+            vc.string = inputTextbox.text
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if appJustRun{
+            inputTextbox.text = ""
+            appJustRun = false
+        }
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
