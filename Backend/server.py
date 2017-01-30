@@ -34,8 +34,8 @@ def getDocumentThemes(textSubmitted):
     print("")
 
     # the consumer key and secret
-    key = "e6376d5a-2175-4c05-930d-83d1ff52453b"
-    secret = "3c4c4ae6-94fe-42da-800c-828fa991318f"
+    key = "NONE"
+    secret = "NONE"
 
     # Task statuses
     TASK_STATUS_UNDEFINED = 'UNDEFINED'
