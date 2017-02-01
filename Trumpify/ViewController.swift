@@ -26,7 +26,7 @@ class ViewController: UIViewController, SKTransactionDelegate, UITextViewDelegat
     @IBOutlet var bottomConstraint: NSLayoutConstraint!
     var appJustRun = true
     
-    let serverURL = "http://fvergara.ddns.net:5000/"
+    let serverURL = "http:/someserver:5000/"
     
     var AI = AIInteractionViewController()
     
